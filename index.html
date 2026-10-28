@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Rayan's 3D Car Racing</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div id="game">
+    <div class="topbar">
+      <div class="brand">🏁 RAYAN'S 3D RACING</div>
+      <div class="stats">
+        <div class="stat"><small>SPEED</small><strong><span id="speed">0</span> <em>KM/H</em></strong></div>
+        <div class="stat"><small>SCORE</small><strong id="score">0</strong></div>
+      </div>
+    </div>
+    <div id="scene"></div>
+    <div class="message" id="message">Press START RACE to begin</div>
+    <div class="hud">
+      <div class="camera-controls">
+        <button id="cameraBtn" class="secondary">📷 Camera: Third Person</button>
+        <button id="restartBtn" class="secondary">↻ Restart</button>
+      </div>
+      <div class="drive-controls">
+        <div class="steering">
+          <div class="control-label">STEERING</div>
+          <div class="steer-row">
+            <button id="leftBtn" class="control-btn steer-btn" aria-label="Steer left">◀</button>
+            <button id="rightBtn" class="control-btn steer-btn" aria-label="Steer right">▶</button>
+          </div>
+        </div>
+        <div class="pedals">
+          <button id="brakeBtn" class="control-btn brake">🛑 BRAKE</button>
+          <button id="gasBtn" class="control-btn gas">🚀 SPEED UP</button>
+        </div>
+      </div>
+      <button id="startBtn" class="start">▶ START RACE</button>
+      <div class="help">Keyboard: ← → steer · ↑ accelerate · ↓ brake · C change camera · Space pause</div>
+    </div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script src="game.js"></script>
+</body>
+</html>
